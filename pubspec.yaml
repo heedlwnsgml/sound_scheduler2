@@ -4,26 +4,28 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  # 사용자의 SDK 버전을 유지합니다
-  sdk: '>=3.9.2 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  # --- 7개 오류의 원인이었던 'localizations'만 제거 ---
-  # flutter_localizations:
-  #   sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # 권한 관리
   permission_handler: ^11.3.1
+  # 소리 모드 제어
   sound_mode: ^3.1.1
+  # 백그라운드 알람
   android_alarm_manager_plus: ^4.0.0
+  # 로컬 데이터 저장
   shared_preferences: ^2.2.3
-
-  # 'intl'은 날짜 포맷('11월 17일 (월)')을 위해 남겨둡니다.
+  # 날짜 포맷
   intl: ^0.20.2
-  # --- --- ---
-
+  # 아이콘
   cupertino_icons: ^1.0.8
+
+  flutter_local_notifications: ^17.0.0
 
 dev_dependencies:
   flutter_test:
